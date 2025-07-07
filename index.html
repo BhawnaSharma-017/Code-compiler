@@ -58,7 +58,6 @@
 
       outputBox.value = "Sending code for execution...";
 
-      // AJAX POST request to submit code
       const xhr = new XMLHttpRequest();
       xhr.open("POST", "https://course.codequotient.com/api/executeCode");
       xhr.setRequestHeader("Content-Type", "application/json");
@@ -103,7 +102,7 @@
           if (errors) {
             outputBox.value = `Compilation Error:\n${errors}`;
           } else if (output) {
-            outputBox.value = `Output:\n${output}`;
+            outputBox.value = `${output}`;
           } else {
             outputBox.value = "No output or error returned.";
           }
